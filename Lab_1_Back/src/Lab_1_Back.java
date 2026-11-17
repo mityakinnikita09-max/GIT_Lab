@@ -20,7 +20,7 @@ public class Lab_1_Back {
 
                 case 1:
                     //Антом
-                    //findPalindromes(scanner);
+                    findPalindromes(scanner);
                     break;
 
                 case 2:
