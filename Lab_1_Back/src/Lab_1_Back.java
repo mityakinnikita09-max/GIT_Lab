@@ -11,7 +11,7 @@ public class Lab_1_Back {
         while (true) {
 
             //Филёнов
-            //printMenu();
+            printMenu();
 
             //Николай
             //int choice = readMenuChoice(scanner);
@@ -77,6 +77,18 @@ public class Lab_1_Back {
         String reverse = new StringBuilder(value).reverse().toString();
 
         return value.equals(reverse);
+    }
+
+    //Филёнов
+    /**
+     * Выводит главное меню программы.
+     */
+    public static void printMenu() {
+
+        System.out.println("--------------------------------------");
+        System.out.println("1. Ввести числа и найти палиндромы");
+        System.out.println("2. Выход");
+        System.out.println("--------------------------------------");
     }
 
     //Антон
