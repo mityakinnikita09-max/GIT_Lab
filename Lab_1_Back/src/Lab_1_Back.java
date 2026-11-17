@@ -78,4 +78,60 @@ public class Lab_1_Back {
 
         return value.equals(reverse);
     }
+
+    //Антон
+    /**
+     * Запрашивает у пользователя строку с целыми числами,
+     * проверяет ввод и выводит найденные числа-палиндромы.
+     */
+    public static void findPalindromes(Scanner scanner) {
+
+        System.out.println();
+        System.out.println("Введите целые числа через пробел.");
+        System.out.println("Например: 121 45 33 -121 789 1001");
+        System.out.print("> ");
+
+        String input = scanner.nextLine().trim();
+
+        if (input.isEmpty()) {
+
+            System.out.println("Ошибка: строка не может быть пустой.");
+            return;
+        }
+
+        String[] numbers = input.split("\\s+");
+
+        int count = 0;
+
+        System.out.println();
+        System.out.println("Числа-палиндромы:");
+
+        for (String item : numbers) {
+
+            if (!isInteger(item)) {
+
+                System.out.println("Пропущено значение \"" + item + "\" — это не целое число.");
+
+                continue;
+            }
+
+            if (isPalindrome(item)) {
+
+                System.out.println(item);
+                count++;
+            }
+        }
+
+        if (count == 0) {
+
+            System.out.println("Палиндромов не найдено.");
+
+        } else {
+
+            System.out.println("--------------------------------------");
+            System.out.println("Найдено палиндромов: " + count);
+        }
+
+        System.out.println();
+    }
 }
